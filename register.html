@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Webpage - Register </title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="shortcut icon" type="image/jpg" href="icon.png"/>
+    <style>
+        body {
+                background-color: #D7EAEA}
+        h1,h2   {
+                color: #48697a;
+                text-align: center;
+                text-shadow: 1px 1px #263859
+                }
+        table, th, td {
+                text-align: center;
+                    }
+        
+        fieldset, legend {
+                margin: 0;
+                padding: 0;
+                    }
+        fieldset {
+                margin: 0 auto;
+                padding: 2em;
+                width: 75%;}
+        legend {
+	            font-weight: bold;
+                float: left;
+                margin-bottom: .5em;
+                width: 100%;
+                }
+        .center {
+                margin-left: auto;
+                margin-right: auto;
+                    }
+        .border {
+                border: 2px solid #628395;
+                border-collapse: collapse;
+                }
+        .noborder {
+                border: none;
+                text-align: center
+                    }
+        .datacenter {
+                text-align: center;
+                    }
+    </style>
+</head>
+<body>
+<h1> 👩‍💻 Welcome to this webpage 💻 </h1>
+</br>
+<form>
+<table class="center noborder">
+    <thead>
+    <th>
+        <tr>
+            <td colspan="4">Register:</td>
+        </tr>
+    </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: right">First Name: </td>
+            <td style="text-align: left"><input type="text", name="fname", placeholder="First Name"></td>
+            <td style="text-align: right">Last Name: </td>
+            <td style="text-align: left"><input type="text", name="lname", placeholder="Last Name"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right">Gender:</td>
+            <td style="text-align: right">Male <input type="radio" name="gender" id="male"></td>
+            <td style="text-align: right">Female <input type="radio" name="gender" id="female"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="text-align: right">Email address:</td>
+            <td style="text-align: left"><input type="email", name="email", placeholder="email@domain.com"></td>
+            <td style="text-align: right">Telephone:</td>
+            <td style="text-align: left"><input type="tel", name="tel", placeholder=""></td>
+        </tr>
+        <tr>
+            <td style="text-align: right">Password:</td>
+            <td style="text-align: left"><input type="password", name="password", placeholder="Password"></td>
+            <td style="text-align: right">Confirm password:</td>
+            <td style="text-align: left"><input type="password", name="password", placeholder="Confirm password"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right">Address:</td>
+            <td style="text-align: left" colspan="3"><textarea name="address" rows="3" cols="61"></textarea></td>
+        </tr>
+        <tr>
+            <td style="text-align: right"><label>City:</label></td>
+            <td style="text-align: left"> 
+                <select id="city" name="city">
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Tokio">Tokio</option>
+                    <option value="Miami">Miami</option>
+                </select>
+            </td>
+            <td style="text-align: right"><label>Country: </label></td>
+            <td style="text-align: left"> 
+                <select id="country" name="country">
+                    <option value="England">England</option>
+                    <option value="France">France</option>
+                    <option value="Japan">Japan</option>
+                    <option value="USA">USA</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right"><input type="checkbox" name="receive_newsletter"></td>
+            <td style="text-align: left" colspan="3">I would like to receive this website's newsletter </td>
+        </tr>
+        <tr>
+            <td style="text-align: right"><input type="checkbox" name="termsandcond"></td>
+            <td style="text-align: left" colspan="3">I have read the terms and conditions. </td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="submit", name="submit"></td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td colspan="4">Already registered? <a href="tables.html"> CLICK HERE </a> to login.</td>
+    </tfoot>
+</table>
+</form>
+
+</br>
+</br>
+</br>
+</br>
+<form>
+    <fieldset class="center" style="width: fit-content; margin: auto;">
+        <legend>Register:</legend>
+        </br>
+        <label>Name:</label>
+        <input type="text", name="name", placeholder="Name">
+        <label style="text-align:right">Surname:</label>
+        <input type="text", name="surname", placeholder="Surname">
+        </br>
+        </br>
+        <label>Email:</label>
+        <input style="text-align:center" type="email", name="email", placeholder="email@domain.com">
+        </br>
+        </br>
+        <label>Password:</label>
+        <input type="password", name="password", placeholder="Password">
+        <input type="password", name="password", placeholder="Confirm Password">
+        </br>
+        </br>
+        <label>Address:</label>
+        <textarea name="address" rows="3" cols="50"></textarea>
+        </br>
+        </br>
+        <label>City:</label>
+        <input type="text", name="city", placeholder="City">
+        <label>Country:</label>
+        <input type="text", name="country", placeholder="Country">
+        </br>
+        </br>
+        <label>Age:</label>
+        <select id="age" name="age">
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45 or above">45 or above</option>
+        </select>
+        </br>
+        </br>
+        <input type="checkbox" name="receive_newsletter"><label>I would like to receive this website's newsletter </label>
+        </br>
+        </br>
+        <input type="checkbox" name="termsandcond"><label>I have read the terms and conditions.</label>
+        </br>
+        </br><center>
+        <input type="submit", name="submit">
+        </center>
+        </br>
+        <p>Already registered? <a href="tables.html"> CLICK HERE </a> to login.</p>
+    </fieldset>
+</form>
+    
+</br>
+<hr>
+</br>
+    
+<table class="center border", width="50%" style="background-color:#EEEEEE">
+    <tr class="center border">                  
+        <th class="center border">Header 1</th>
+        <th class="center border">Header 2</th>
+        <th class="center border">Header 3</th>
+        <th class="center border">Header 4</th>
+    </tr>
+    <tr class="center border">
+        <td class="center border">1st col, 1st row</td>
+        <td class="center border" colspan="3"> - COLSPAN 3 columns - </td>
+    </tr>
+    <tr>
+        <td class="center border" rowspan="3"> ROWSPAN, 3 rows </td>
+        <td class="center border">2nd col, 2nd row</td>
+        <td class="center border">3rd col, 2nd row</td>
+        <td class="center border">4th col, 2st row</td>
+    </tr>        
+    <tr>
+        <td class="center border">2nd col, 3nd row</td>
+        <td class="center border">3rd col, 3nd row</td>
+        <td class="center border">4th col, 3st row</td>
+    </tr>        
+    <tr>
+        <td class="center border">2nd col, 4nd row</td>
+        <td class="center border" rowspan="2">ROWSPAN 2 rows</td>
+        <td class="center border">4th col, 4st row</td>
+    <tr>
+        <td class="center border">1st col, 5nd row</td>
+        <td class="center border">2nd col, 5nd row</td>
+        <td class="center border">4th col, 5st row</td>
+    </tr>        
+    <tr>
+        <td class="center border">1st col, 6nd row</td>
+        <td class="center border" colspan="2">COLSPAN 2 columns</td>
+        <td class="center border">4th col, 6st row</td>
+    </tr>
+</table>
+</br>
+</br>
+<table border="5" width="50%">
+    <thead>
+        <tr>                 
+            <th colspan="3">Invoice</th>
+            <th>Date: 12/11/2020</th>
+        </tr>
+        <tr>                  
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price per item</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align:left">Pencil</td>
+            <td style="text-align:left">5</td>
+            <td style="text-align:left">£ 0.20</td>
+            <td style="text-align:right">£ 1.00</td>
+        </tr>
+        <tr>
+            <td style="text-align:left">Paperclip</td>
+            <td style="text-align:left">10</td>
+            <td style="text-align:left">£ 0.10</td>
+            <td style="text-align:right">£ 1.00</td>
+        </tr>        
+        <tr>
+            <td style="text-align:left">Envelope</td>
+            <td style="text-align:left">4</td>
+            <td style="text-align:left">£ 0.25</td>
+            <td style="text-align:right">£ 1.00</td>
+        </tr>           
+        <tr>
+            <td style="text-align:left">Notepad</td>
+            <td style="text-align:left">1</td>
+            <td style="text-align:left">£ 1.00</td>
+            <td style="text-align:right">£ 1.00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td style="text-align:left" colspan="3">Sub-total:</td>
+            <td style="text-align:right">£ 4.00</td>
+        </tr>        
+        <tr>
+            <td style="text-align:left" colspan="2">Tax:</td>
+            <td style="text-align:left">(10%)</td>
+            <td style="text-align:right">£ 0.40</td>
+        </tr>
+        <tr>
+            <td style="text-align:left" colspan="3">Total:</td>
+            <td style="text-align:right">£ 4.40</td>
+        </tr>
+    </tfoot>
+</table>
+</br>
+</br>
+</br>
+<table border="5" width="80%">
+    <thead>
+        <tr>
+            <td colspan="5"><h2>Please vote on the cutest puppy:</h2></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Picture</td>
+            <td>Vote</td>
+            <td colspan="2">Current vote count:</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Molly Sunshine</td>
+            <td><img src="cutepuppy2.jpg"></td>
+            <td><input type="radio" name="puppy" id="Molly"></td>
+            <td><label for="votes">Votes:</label>
+            <progress id="Molly" value="15" max="100"> 15% </progress>
+            </td>
+            <td rowspan="4"><input type="submit"></td>
+        </tr>
+        <tr>
+            <td>Gaspar Borracho</td>
+            <td><img src="cutepuppy1.jpg"></td>
+            <td><input type="radio" name="puppy" id="Gaspar"></td>
+            <td><label for="votes">Votes:</label>
+            <progress id="Gaspar" value="30" max="100"> 30% </progress>   
+            </td>
+        </tr>
+        <tr>
+            <td>Cottonbear</td>
+            <td><img src="cutepuppy3.jpg"></td>
+            <td><input type="radio" name="puppy" id="Cottonbear"></td>
+            <td><label for="votes">Votes:</label>
+            <progress id="Cottonbear" value="50" max="100"> 50% </progress>   
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<footer>
+<p class="datacenter"><b>Luciana Marini © 2021</b></p>
+</footer>
+</body>
+</html>
