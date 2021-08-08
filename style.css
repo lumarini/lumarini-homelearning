@@ -1,0 +1,136 @@
+
+/* 
+font-family: 'Caveat', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; 
+*/
+
+
+body {
+    background-image: url("wallpaper.PNG");
+    background-repeat: repeat;
+    margin: 0px 0px 0px 0px;
+  }
+
+.top {
+    background-color: #eaeede;
+    position:fixed;
+    top:0;
+    margin: 0px;
+    width:100%;
+    z-index:100;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    box-shadow: inset 0 -6px 8px #8c8066;
+}
+
+.logo {
+    text-align:center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 160px;
+    font-style: italic;
+    font-weight: "600";
+    color: #423c30;
+    margin: 0px;
+    line-height: 80%;
+    text-shadow: 4px  4px 6px #eaeede;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    font-style: bold;
+    color: black;   
+    margin: 0px; 
+}
+
+h3 {
+    padding: 60px 20px 40px 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 48px;
+    font-style: bold;
+    color: black;   
+    margin: 0px; 
+}
+
+ul   {
+    list-style-type: none
+}
+li  {  
+    background-color:#eaeede;
+    display: inline-block;
+    padding: 12px;}
+
+li a {
+    display: inline;
+    text-decoration: none;
+    color: rgb(54, 40, 40);
+    text-align: center;
+    padding: 12px;
+}
+
+li a:hover {
+    color: #8c8066;
+    text-shadow: 2px 2px 5px  rgb(131, 136, 122);
+        }
+
+div.text{
+    background-color: #eaeede;
+    box-shadow: inset 6px 6px 14px #8c8066,
+    inset -6px -6px 14px #8c8066;
+}
+.text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 48em;
+    text-overflow: clip;
+    padding:20px 100px 20px 30px;
+    
+
+}
+
+#icons {
+    text-align:center;
+    font-size: 24px;
+    color: #423c30;
+    margin: 0px;
+    line-height: 80%;
+}
+
+#left {
+    float: left;
+    height: 200px;
+    width: auto;
+    padding-left: 200px;
+}
+
+#right {
+    float:right;
+    height: 200px;
+    width: auto;
+    padding-right: 200px;
+}
+
+footer {
+    padding-top: 16px;
+    background-color: #eaeede;
+    bottom:0;
+    margin: 0px;
+    width:100%;
+    z-index:100;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+}
+
+footer p {
+    font-size: 14px;
+    
+}
