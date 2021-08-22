@@ -26,22 +26,22 @@ legend {
     margin-right: auto;
         }
 
-    
+
 
 p {
     margin: 0px;
 }
 
-label{
+.labels {
     display: inline-block;
     float: left;
     clear: left;
-    width: 250px;
+    width: 150px;
     text-align: right;
     padding: 10px;
     }
 
-input {
+.options {
     display: inline-block;
     float: left;
     padding: 5px;
@@ -137,7 +137,7 @@ h2 {
 }
 
 nav ul{
-background: linear-gradient(90deg, 
+background: linear-gradient(90deg,
 rgba(255,255,255,0) 0%,
 rgba(255,255,255,0.2) 25%,
 rgba(255,255,255,0.2) 75%,
@@ -169,4 +169,3 @@ nav ul li a {
     font-family: arial;
     padding-right: 80px;
 }
-

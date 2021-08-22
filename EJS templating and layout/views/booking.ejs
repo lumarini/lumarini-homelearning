@@ -1,0 +1,67 @@
+<%- include("header") -%>
+
+</br>
+</br>
+<img id="left" src="cup-left.png">
+<img id="right" src="cup-right.png">
+<h1 class="logo">1932</h1>
+<h2 class="logo">Vintage Cafe</h2>
+
+</br>
+</br>
+<div class="text">
+    <h3>Book a table with us:</h3>
+
+</br>
+<form>
+    <fieldset class="center" style="width: fit-content; margin: auto;">
+        <legend>Booking details</legend>
+        </br>
+        <label class="labels">Full name:</label>
+        <input class="options" type="text", name="name", placeholder="Name">
+        </br>
+        </br>
+        <label class="labels">Email:</label>
+        <input class="options" style="text-align:center" type="email", name="email", placeholder="email@domain.com">
+        </br>
+        </br>
+        <label class="labels">Contact number:</label>
+        <input class="options" type="tel", name="tel", placeholder="+44">
+        </br>
+        </br>
+        <label class="labels">Table for:</label>
+        <select class="options" id="table" name="table">
+            <option value="2">2 people</option>
+            <option value="4">4 people</option>
+            <option value="6">6 people</option>
+            <option value=">6">+6 people</option>
+        </select>
+        </br>
+        </br>
+        <label class="labels">Time:</label>
+        <select class="options" id="time" name="time">
+            <option value="12:00">12:00</option>
+            <option value="12:30">12:30</option>
+            <option value="1:00">1:00pm</option>
+            <option value="1:30">1:30pm</option>
+            <option value="2:00">2:00pm</option>
+        </select>
+        </br>
+        </br>
+        <input type="checkbox" name="receive_email"><label>Receive booking confirmation via email.</label>
+        </br>
+        </br>
+        <input type="checkbox" name="receive_text"><label>Receive booking confirmation via text message.</label>
+        </br>
+        </br><center>
+        <input type="submit", name="submit">
+        </center>
+        </br>
+    </fieldset>
+</form>
+</br>
+</br>
+    </div>
+</br>
+
+<%- include("footer") -%>
