@@ -28,7 +28,7 @@ app.post("/", function(req, res){
 });
 
 app.get("/bmicalc", function(req, res){
-  res.sendFile(__dirname + "/bmicalc.html")
+  res.sendFile(__dirname + "/bmicalc.html");
 });
 
 app.post("/bmicalc", function(req, res){
@@ -36,7 +36,7 @@ app.post("/bmicalc", function(req, res){
    var height = Number(req.body.height);
    var bmiResult = (weight/(height*height));
 
-   res.send("Your BMI is "+ bmiResult);
+   res.sendFile(__dirname + "/bmicalc-result.html");
 });
 
 

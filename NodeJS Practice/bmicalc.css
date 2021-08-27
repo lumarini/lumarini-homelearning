@@ -1,0 +1,53 @@
+fieldset {
+    padding: 2em;
+    width: 90%;
+    border-radius: 10px;
+    border-color: rgb(87, 18, 18);
+    border-style: solid;
+}
+
+
+h1, h2 {
+    font-family: 'Calibri';
+    font-size: 50px;
+    font-weight: "600";
+    color: rgb(87, 18, 18);
+    text-align: center;
+    margin: 0px;
+    line-height: 120%;
+    text-shadow: 4px  4px 6px #915151;
+    padding-bottom: 20px;
+}
+
+label {
+    font-family: 'Calibri';
+    font-size: 22px;
+    width: 100px;
+    text-align: right;
+    padding: 12px;
+    }
+
+input {
+    color: #777;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #c7d0d2;
+    border-radius: 2px;
+    box-shadow: inset 0 1.5px 3px #915151, 0 0 0 5px #f5f7f8;
+}
+
+button {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #c7d0d2;
+    background-color: #915151;
+}
