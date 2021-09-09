@@ -1,0 +1,13 @@
+class MinAndMaxDemo 
+{
+ public static void main(String[] args) 
+ {
+  Byte minimumByteValue = Byte.MIN_VALUE;
+  Byte maximumByteValue = Byte.MAX_VALUE;
+  System.out.println("Minimum byte value is : " + minimumByteValue);
+  System.out.println("Maximum byte value is : " + maximumByteValue);
+
+  Short minimumShortValue = Short.MIN_VALUE;
+  Short maximumShortValue = Short.MAX_VALUE;
+  System.out.println("Minimum short value is : " + minimumShortValue);
+  System.out.println("Maximum short value is : " + maximumShortValue);
