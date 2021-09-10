@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>
+    myNotes
+</title>
+<link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+    <header>
+      <h1> myNotes </h1>
+    </header>
+    <div>
+    <form class="create-note" action="/notes" method="POST">
+          <textarea name="content" value="content" placeholder="Take a note..." rows="3"></textarea>
+  
+          <button type="submit">ADD NOTE</button>
+    </form>
+    </div>
+
+<!-- For each note, render one note -->
+
+
+
+      <%  renderedNotes.forEach(note => { %>
+        
+        <div class="note">
+          <form action="/delete" method="POST">
+          <p><%= note.content %></p>
+          <button type="submit" name="delete" value="<%= note._id %>">Delete</button>
+          </form>
+        </div>
+      <%  }); %>
+
+      <footer>
+        <p>LPMarini - Copyright ⓒ {year}</p>
+      </footer>
+        </body>
+</html>
