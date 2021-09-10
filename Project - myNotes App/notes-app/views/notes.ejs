@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-<title>
+      <title>
     myNotes
-</title>
-<link rel="stylesheet" href="/styles.css">
+      </title>
+          <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
     <header>
@@ -13,17 +13,14 @@
     <div>
     <form class="create-note" action="/notes" method="POST">
           <textarea name="content" value="content" placeholder="Take a note..." rows="3"></textarea>
-  
+
           <button type="submit">ADD NOTE</button>
     </form>
     </div>
 
-<!-- For each note, render one note -->
-
-
 
       <%  renderedNotes.forEach(note => { %>
-        
+
         <div class="note">
           <form action="/delete" method="POST">
           <p><%= note.content %></p>
@@ -33,7 +30,7 @@
       <%  }); %>
 
       <footer>
-        <p>LPMarini - Copyright ⓒ {year}</p>
+        <p>LPMarini - Copyright ⓒ 2021</p>
       </footer>
         </body>
 </html>

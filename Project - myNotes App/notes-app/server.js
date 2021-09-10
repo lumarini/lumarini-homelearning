@@ -14,8 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
-
-//-----------------------------------------------------------SETTING CONNECTION
+//----------------------------------------------------------SETTING CONNECTION
 mongoose.connect(process.env.URL_DB, {useNewUrlParser: true})
 
 const notesSchema = new mongoose.Schema ({
@@ -24,14 +23,13 @@ const notesSchema = new mongoose.Schema ({
 
 const Note = new mongoose.model("Note", notesSchema);
 
-//--------------------------------------------------------------------LOGIN PAGE
+//-----------------------------------------------------------LOGIN PAGE
 const userSchema = new mongoose.Schema ({
   username: String,
   password: String
 });
 
-const encryption = "Encriptionrequiredbyme."
-//process.env.ENCRYPTION;
+const encryption = process.env.ENCRYPTION;
 
 userSchema.plugin(encrypt, {secret:encryption, encryptedFields:["password"]});
 
@@ -44,10 +42,7 @@ Note.find({}, function(err,retrieved){
   else     {retrieved = savedNotes}
 });
 
-// Note.find({}, function(err,retrieved){
-//   if (err) {console.log(err);}
-//   else     {retrieved.map(note => savedNotes.push(note)); }
-// });
+//-------------------------------------------------------GET REQUESTS
 
 app.get('/', function (req, res) {
   res.render("home");
@@ -65,11 +60,12 @@ app.get("/notes", function(req,res){
 
   Note.find({}, function(err,retrieved){
   if (err) {console.log(err);}
-  else     {  
+  else     {
     res.render("notes", {renderedNotes: retrieved});
   }});
 });
-  
+
+//------------------------------------------------------POST REQUESTS
 
 app.post("/register", function(req,res){
   const newUser = new User ({
@@ -80,9 +76,8 @@ app.post("/register", function(req,res){
   if (err) {console.log(err);}
   else {
     console.log("User successfully added to database.");
-    // res.render("notes", {renderedNotes: savedNotes});
     res.redirect("notes");
-  }  
+  }
 });
 });
 
@@ -96,14 +91,14 @@ app.post("/login", function(req,res){
     else {
         if (foundUser) {
           if (foundUser.password === password) {
-            // res.render("notes", {renderedNotes: savedNotes});
             res.redirect("notes");
           }   else {res.send("Autentication failed - incorrect password.")}
         } else {res.send("Autentication failed - username not found.")}
         }
   });
 });
-//---------------------------------------------------------------------POST REQUEST
+
+
 app.post("/notes", function(req,res){
     const newContent = req.body.content;
     const newNote = new Note ({
@@ -122,12 +117,16 @@ app.post("/delete", function(req,res){
   Note.findByIdAndRemove(deleteNote, function (err) {
       if (err) {console.log(err)}
       else {console.log("Note deleted.");}
-  }); 
- 
+  });
+
   res.redirect("notes");
 });
-//-------------------------------------------------------------------------- SERVER CONN
 
-app.listen(3000, function() {
+
+//----------------------------------------------------LISTEN TO PORT
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function() {
     console.log("Server started successfully.");
   });
