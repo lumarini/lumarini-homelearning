@@ -1,0 +1,118 @@
+
+
+cd Desktop\SOFTWARE DEV COURSE\authentication-snippets\login\login>
+
+id INT NOT NULL,
+title VARCHAR(10),
+first_name VARCHAR(30),
+last_name VARCHAR(30),
+dob DATE,
+email VARCHAR(30),
+phone VARCHAR(12)
+address1 TINYTEXT,
+address2 TINYTEXT,
+postcode VARCHAR(10),
+city VARCHAR(30),
+county VARCHAR(30),
+country VARCHAR(30),
+password VARCHAR(50),
+tandc BOOLEAN
+
+
+
+from sklearn.linear_model import LinearRegression
+lm = LinearRegression()
+
+X = df ['bedrooms']
+Y = df ['price']
+
+lm.fit(X,Y)
+
+
+https://www.w3resource.com/sql-exercises/
+https://www.complexsql.com/database-normalization/
+https://www.codecademy.com/articles/what-is-rdbms-sql
+https://www.mysqltutorial.org/mysql-foreign-key/
+https://www.w3schools.com/mysql/
+
+
+
+CREATE DATABASE customers;
+USE customers;
+
+CREATE TABLE customer (
+    customer_id INTEGER,
+    first_name VARCHAR(55),
+    last_name VARCHAR(55)
+);
+
+CREATE TABLE address (
+    address_id INTEGER ,
+    building_number VARCHAR(55),
+    street VARCHAR(55),
+    city VARCHAR(55),
+    post_code VARCHAR(55),
+    country VARCHAR(55)
+);
+
+CREATE TABLE email_address (
+    email_address_id INTEGER,
+    email_address_customer_id INTEGER,
+    email_address VARCHAR(55)
+);
+
+
+CREATE TABLE phone_number (
+    phone_number_id INTEGER ,
+    phone_number_customer_id INTEGER ,
+    phone_number VARCHAR(55)
+);
+
+CREATE TABLE orders (
+    order_id INTEGER,
+    orders_customer_id INTEGER,
+    order_date DATE
+);
+
+CREATE DATABASE customers;
+USE customers;
+
+CREATE TABLE customer (
+    customer_id INTEGER NOT NULL,
+    first_name VARCHAR(55) NOT NULL,
+    last_name VARCHAR(55) NOT NULL,
+    CONSTRAINT PK_customer PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE address (
+    address_id INTEGER NOT NULL,
+    building_number VARCHAR(55) NOT NULL,
+    street VARCHAR(55) NOT NULL,
+    city VARCHAR(55),
+    post_code VARCHAR(55) NOT NULL,
+    country VARCHAR(55),
+	CONSTRAINT PK_Address PRIMARY KEY (address_id)
+);
+
+CREATE TABLE email_address (
+    email_address_id INTEGER NOT NULL,
+    email_address_customer_id INTEGER NOT NULL,
+    email_address VARCHAR(55) NOT NULL,
+	CONSTRAINT PK_email_address PRIMARY KEY (email_address_id)
+);
+
+
+CREATE TABLE phone_number (
+    phone_number_id INTEGER NOT NULL,
+    phone_number_customer_id INTEGER NOT NULL,
+    phone_number VARCHAR(55),
+    CONSTRAINT PK_phone_number PRIMARY KEY (phone_number_id)
+);
+
+CREATE TABLE orders (
+    order_id INTEGER NOT NULL,
+    orders_customer_id INTEGER NOT NULL,
+    order_date DATE,
+	CONSTRAINT PK_order_id PRIMARY KEY (order_id, order_date)
+);
+
